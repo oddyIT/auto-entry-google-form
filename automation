@@ -1,0 +1,98 @@
+function myFunction() {
+  
+
+  var wrkBk = SpreadsheetApp.getActiveSpreadsheet();
+  var wrkSht= wrkBk.getSheetByName("Form responses 1");
+  
+  var formURL = ""
+  var formData = ""
+  
+  
+  var fname = "";
+  var nik = "";
+  var foto = "";
+  var fktp = "";
+  var tempatL = "";
+  var tanggalL = "";
+  var jenisK = "";
+  var status = "";
+  var jmlhank = "";
+  var asal = "";
+  var rtrw = "";
+  var nohp = "";
+  var perkerja = "";
+  var penghasilan = "";
+  var nyatri = "";
+  var pendidikan = "";
+  var jabatan = "";
+  var cabang = "";
+  var mwc = "";
+  var ranting = "";
+  var anakr = "";
+  var lembaga = "";
+  var botomon = "";
+  var periode = "";
+  var email = "";
+  var fbook = "";
+  var jamiyah = "";
+  var goldarah = "";
+  var infaq = "";
+
+  var noOfRows = 8; //jumlahdata
+  
+  for (i=8;i<=noOfRows;i++)
+  {
+    fname = wrkSht.getRange("B" + i).getDisplayValue();
+    nik = wrkSht.getRange("C" + i).getDisplayValue();
+    foto = wrkSht.getRange("D" + i).getDisplayValue();
+    fktp = wrkSht.getRange("E" + i).getDisplayValue();
+    tempatL = wrkSht.getRange("F" + i).getDisplayValue();
+    tanggalL = wrkSht.getRange("G" + i).getDisplayValue();
+    jenisK = wrkSht.getRange("H" + i).getDisplayValue();
+    status = wrkSht.getRange("I" + i).getDisplayValue();
+    jmlhank = wrkSht.getRange("J" + i).getDisplayValue();
+	asal = wrkSht.getRange("K" + i).getDisplayValue();
+	rtrw = wrkSht.getRange("L" + i).getDisplayValue();
+	nohp = wrkSht.getRange("M" + i).getDisplayValue();
+	perkerja = wrkSht.getRange("N" + i).getDisplayValue();
+	penghasilan = wrkSht.getRange("O" + i).getDisplayValue();
+	nyatri = wrkSht.getRange("P" + i).getDisplayValue();
+	pendidikan = wrkSht.getRange("Q" + i).getDisplayValue();
+	jabatan = wrkSht.getRange("R" + i).getDisplayValue();
+	cabang = wrkSht.getRange("S" + i).getDisplayValue();
+	mwc = wrkSht.getRange("T" + i).getDisplayValue();
+	ranting = wrkSht.getRange("U" + i).getDisplayValue();
+	anakr = wrkSht.getRange("V" + i).getDisplayValue();
+	lembaga = wrkSht.getRange("W" + i).getDisplayValue();
+	botomon = wrkSht.getRange("X" + i).getDisplayValue();
+	periode = wrkSht.getRange("Y" + i).getDisplayValue();
+	email = wrkSht.getRange("Z" + i).getDisplayValue(); 
+	fbook = wrkSht.getRange("AA" + i).getDisplayValue();
+	jamiyah = wrkSht.getRange("AB" + i).getDisplayValue();
+	goldarah = wrkSht.getRange("AC" + i).getDisplayValue();
+	infaq = wrkSht.getRange("AD" + i).getDisplayValue();
+
+	formURL = "https://docs.google.com/forms/d/e/1FAIpQLSci_BiLIWMdUZVzRPq0gXsKzJA6AY1O7us03vne7Pbjx401vA/formResponse?&pageHistory=0,1,2,3,4,5,6"
+	formData = "&entry.1774876629=" + fname + "&entry.1473422863="+ nik + "&entry.1476818026="+ foto + "&entry.1135840518="+ fktp + "&entry.1713910020=" tempatL + "&entry.2112467279="+ tanggalL +"&entry.377683038="+ jenisK +"&entry.397077748="+ status +"&entry.1395983550="+ jmlhank +"&entry.788709265="+ asal +"&entry.750750448="+ rtrw +"&entry.714446395="+ nohp +"&entry.1790905802="+ perkerja +"&entry.52970774="+ penghasilan +"&entry.521059288="+ nyatri +"&entry.276219684="+ pendidikan +"&entry.984406853="+ jabatan +"&entry.1805345058="+ cabang +"&entry.649385616="+ mwc +"&entry.435239014="+ ranting +"&entry.743331344="+ anakr +"&entry.591721577="+ lembaga +"&entry.1963310239="+ botomon +"&entry.1620023572="+ periode +"&entry.431179633="+ email +"&entry.243446561="+ fbook +"&entry.1793301159="+ jamiyah +"&entry.2020398734="+ goldarah +"&entry.24061511="+ infaq "
+	
+	var finalURL = formURL + formData
+	
+	var options = {
+		"method": "post"
+	  };
+	  
+	  UrlFetchApp.fetch(finalURL, options);
+	  
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
